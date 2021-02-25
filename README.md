@@ -22,5 +22,9 @@ docker run -d \
     -p 0.0.0.0:2456:2456/udp \
     -p 0.0.0.0:2457:2457/udp \
     -p 0.0.0.0:2458:2458/udp \
+    --restart unless-stopped \
+    --log-driver json-file \
+    --log-opt max-size=10m \
+    --log-opt max-file=10 \
     mpidlisnyi/valheim
 ```
